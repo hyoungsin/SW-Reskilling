@@ -1,0 +1,44 @@
+'''
+음식 가격 계산하기
+교장 선생님인 엘리스는 150명의 학생을 이끌고 수학여행을 가게 되었습니다.
+
+목적지로 가는 길에 휴게소에서 밥을 먹으려고 합니다.
+
+예산 조정을 위해 학생들이 메뉴를 미리 고르도록 하였습니다.
+
+그 결과 한식(korean) 55명, 중식(chinese) 43명, 양식(western) 52명으로 나왔습니다.
+
+한식은 7,000원, 중식은 6,000원, 양식은 8,500원일 때 전체 예산은 얼마가 필요할지 계산하세요.
+
+단, 현재 휴게소에서는 한식 10% 할인 혜택을 주기 때문에 이를 고려해야 합니다.
+
+
+지시사항
+korean, chinese, western 변수에 가격을 넣어주세요.
+
+discount_korean 변수에 할인된 한식의 가격을 저장하세요.
+
+total_price 변수에 모든 학생이 고른 메뉴에 대한 전체 예산을 계산하여 저장하세요
+'''
+
+# 한식 가격
+korean = 7000
+
+# 중식 가격
+chinese = 6000
+
+# 양식 가격
+western = 8500
+
+# 할인된 한식의 가격
+discount_korean = korean*0.9
+
+# 전체 예산을 계산하여 저장해 보세요.
+total_price = chinese*43+western*52+discount_korean*55
+
+# 값을 확인해 보세요!
+print("한식 : " + str(korean))
+print("중식 : " + str(chinese))
+print("양식 : " + str(western))
+print("할인된 한식 : " + str(discount_korean))
+print("전체 예산 : " + str(total_price))
