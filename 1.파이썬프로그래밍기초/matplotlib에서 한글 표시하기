@@ -1,0 +1,42 @@
+'''
+
+[실습2 해설] matplotlib에서 한글 표시하기
+
+matplotlib에서 한글 표시하기
+matplotlib은 기본적으로 로마자 사용 환경에 최적화되어 있습니다. matplotlib의 기본 폰트가 한글을 지원하지 않기 때문에, 차트의 제목, 축, 범주 등에 한글 텍스트를 넣으려면 한글을 지원하는 폰트로 교체해야 합니다.
+
+이 실습에서는 matplotlib 폰트 매니저를 통해 폰트를 설정하는 방법을 배워 보겠습니다.
+
+미리 작성된 코드를 따라 가며 사용 방법을 익혀 보세요.
+
+matplotlib.font_manager를 import 합니다.
+font_manager 모듈 내에는 FontProperties 클래스가 정의되어 있습니다. 생성자에 폰트의 이름을 넣고 인스턴스를 생성합니다.
+텍스트를 추가할 때마다 fontproperties 매개변수에 생성한 FontProperties의 인스턴스를 인자로 넣어 줍니다.
+
+'''
+
+rom elice_utils import EliceUtils
+elice_utils = EliceUtils()
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+from matplotlib import rc
+
+font = fm.FontProperties(fname='./NanumBarunGothic.ttf') #  나눔바름고딕체 import
+
+x = range(31) #틱 표시단위 설정
+temperatures = [
+    22.8, 25.3, 32.6, 31.8, 29.0, 27.1, 29.2,
+    28.1, 24.2, 26.5, 29.5, 28.2, 30.9, 31.9,
+    33.2, 34.0, 32.1, 33.2, 34.1, 34.7, 36.9,
+    38.0, 35.7, 36.8, 34.1, 33.7, 35.4, 35.2,
+    36.7, 36.9, 38.3
+]
+
+ticks = [] # tick표시 명칭 설정
+for i in x:
+    ticks.append('7월 {}일'.format(i)) # 날짜 반복문 생성
+plt.bar(x, temperatures) # 바그래프 그리기
+plt.title('7월날씨', fontproperties=font) # 제목생성
+plt.xticks(x, ticks, fontproperties=font,rotation = 'vertical') # x축정보, ticks 리스트 정보, 한글폰트 정의, 글자 방향 설정
+plt.savefig('graph.png') # 그래프 표시해주는 함수
+elice_utils.send_image('graph.png')
