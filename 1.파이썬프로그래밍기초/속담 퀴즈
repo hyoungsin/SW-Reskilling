@@ -1,0 +1,41 @@
+'''
+
+속담 퀴즈
+우리 속담 10개가 모듈 proverb의 변수 problem과 answer에 담겨있습니다.
+
+problem에는 속담의 앞부분이, answer에는 속담의 뒷부분이 들어있으며 같은 인덱스에 있는 것이 같은 속담입니다.
+
+입력예시
+
+내코가
+Copy
+출력예시
+
+석자
+Copy
+
+지시사항
+proverb 모듈을 불러오세요.
+
+문자열을 입력받으세요.
+
+입력받은 문자열을 problem 리스트에서 찾아 인덱스를 저장하세요.
+
+answer 리스트에서 저장한 인덱스의 문자를 출력하세요.
+
+
+'''
+
+# 1번을 해보세요.
+from proverb import problem, answer # 모듈에서 변수 불러오기
+
+# 2번을 해보세요.
+str1 = input()
+
+# 3번을 해보세요.
+ind1 = problem.index(str1) #list에서 str의 index찾기
+
+# 4번을 해보세요.
+print(answer[ind1])
+
+
