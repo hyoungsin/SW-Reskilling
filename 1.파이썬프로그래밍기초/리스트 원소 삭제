@@ -33,3 +33,9 @@ my_list.remove(2) #remove는 앞에서 탐색해서 1개만 없앨수 있음 2�
 print(my_list)
 my_list.remove(2)
 print(my_list)
+
+my_list = ['a', 'b', 'c', 'f']
+my_list.remove('f')
+print(my_list) #['a', 'b', 'c']
+
+my_list.remove('d') #오류!
