@@ -1,0 +1,34 @@
+'''
+
+[실습11 해설] 수능 금지곡
+
+수능 금지곡
+고3인 유현이는 수능을 1주일 앞두고 친구에게 좋은 선물을 주고 싶어합니다. 그 중에서도, 중독성이 가장 강한 ‘링딩동’ 노래를 부르려고 하는데, 유현이는 'ring', 'ding', 'dong', 'diggi'라는 가사의 일부분만 알고 있습니다.
+
+오른쪽 실습에서 시퀀스의 두 연산(+, *)을 이용해 친구를 괴롭히러 가봅시다.
+
+
+이렇게 해봐요!
+6, 9, 12~14번째 줄의 미션을 확인하고, 이를 수행해보세요.
+
+'''
+
+a = ['ring']
+b = ['ding']
+c = ['dong']
+d = ['diggi']
+
+# 연결 연산자를 이용해서 ['ring', 'ding', 'dong']를 lyric에 대입해봅시다.
+lyric = a+b+c
+print(lyric)
+
+# 수능을 하루 앞둔 친구에게 수능 금지곡을 들려줍시다!
+# 변수 shinee에 다음 리스트를 담아봅시다.
+# ['ring', 'ding', 'dong', 'ring', 'ding', 'dong']
+shinee1 = ['ring', 'ding', 'dong', 'ring', 'ding', 'dong']
+print(shinee1)
+
+# 노래가 좀 짧네요! 뒷부분도 불러봅시다!
+#['ring','diggi','ding','diggi','ding','ding','ding']
+shinee2 = ['ring','diggi','ding','diggi','ding','ding','ding']
+print(shinee1,shinee2)
