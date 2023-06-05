@@ -1,0 +1,60 @@
+'''
+
+[실습3 해설] unittest 실습
+
+unittest 실습
+이 실습에서는 Python의 기본 내장 모듈인 unittest를 실제로 활용하여 테스트 코드를 작성하는 실습을 해 보겠습니다.
+
+여러분의 빠른 적응을 위해, 실습 1 에서 만났던 is_palindrome() 함수를 다시 테스트해 보겠습니다. 실습 1에서는 assert 문을 이용해 테스트 코드를 작성했다면, 여기서는 unittest 모듈을 활용해, 조금 더 실수를 적게 할 수 있는 테스트 코드를 작성해 봅시다.
+
+다시 한 번 소개하자면, is_palindrome() 함수는 다음과 같은 조건들을 갖고 있습니다.
+
+하나의 문자열을 매개변수로 받습니다.
+주어진 문자열이 앞으로 읽어도 뒤로 읽어도 같은 회문이라면, True를 리턴합니다. (예시: madam, level, 다시합창합시다)
+주어진 문자열에서 대소문자, 공백, 특수문자는 무시합니다. 즉, “다시 합창합시다!” 는 회문입니다.
+빈 문자열은 회문으로 취급합니다.
+코드를 작성하기 전에 실행을 눌러, 테스트 코드의 결과가 어떻게 나오는지 확인해 보세요. 그리고 모든 테스트를 작성한 뒤에, 올바르게 작동하는지 확인해 보세요.
+
+
+'''
+
+import unittest
+from helper import is_palindrome
+
+class IsPalindromeTests(unittest.TestCase):
+    
+    def test_madam(self):
+        self.assertTrue(is_palindrome("madam"))
+
+    # 문자열 "adam"에 대해 테스트합니다.
+    def test_adam(self):
+        self.assertFalse(is_palindrome("adam"))
+
+    # 빈 문자열에 대해 테스트합니다.
+    def test_empty(self):
+        self.assertTrue(is_palindrome(""))
+
+    # 문자열 "Step on no pets"에 대해 테스트합니다.
+    def step_on_no_pets(self):
+        self.assertTrue(is_palindrome("Step on no pets"))
+
+    # 문자열 "Madam, I'm Adam"에 대해 테스트합니다.
+    def madam_im_Adam(self):
+        self.assertTrue(is_palindrome("Madam, I'm Adam"))
+
+    # 문자열 "소주 만 병만 주소"에 대해 테스트합니다.
+    def 소주1(self):
+        self.assertTrue(is_palindrome("소주 만 병만 주소"))
+
+
+    # 문자열 "!소주 만 병만 주소?"에 대해 테스트합니다.
+    def 소주2(self):
+        self.assertTrue(is_palindrome("!소주 만 병만 주소?"))
+
+
+    # 문자열 "소주 만 병쯤만 주소"에 대해 테스트합니다.
+    def 소주3(self):
+        self.assertTrue(is_palindrome("소주 만 병쯤만 주소"))
+
+
+unittest.main()
