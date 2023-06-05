@@ -1,0 +1,36 @@
+'''
+
+계산기 디버깅 준비하기 2
+이전 실습에 이어서, 이번주 프로젝트를 위한 몸풀기 실습입니다.
+
+이번 실습에서 완성할 함수는 2개입니다.
+
+operate(): 숫자 2개와 연산자가 주어졌을 때, 그 결과값을 계산합니다. 예를 들어, operate(5, 3, '+')의 결과값은 5 + 3, 즉 8입니다. 연산자는 반드시 '+', '-', '*', '/'중 하나입니다.
+press_equal(): Calculator 클래스의 메소드입니다. 메모리에 저장된 값과, 현재 화면에 표시된 값과, 가장 최근에 누른 연산자를 이용해 결과값을 구하고 그 값을 화면(current_number)에 표시합니다.
+
+잘 이해가 되지 않는다면, 3, +, 5, =을 순서대로 누르는 상황을 생각해 보세요. 마지막 = 버튼을 누르는 시점에 메모리에는 3이, 화면에는 5가, 최근 연산자에는 ‘+’가 저장되어 있습니다. 그 결과 8이 화면에 표시됩니다.
+
+스켈레톤 코드에 적힌 설명을 잘 읽고, 함수 2개를 완성해 보세요.
+'''
+
+def operate(n1, n2, operator): # 계산기 설정 (사칙연산)
+    if operator == '+':
+        return n1 + n2
+    elif operator == '-':
+        return n1 - n2
+    elif operator == '*':
+        return n1 * n2
+    elif operator == '/':
+        return n1 / n2
+class Calculator:
+    def __init__(self):
+        self.clear()
+    def clear(self):
+        self.current_number = 0
+        self.current_operator = None
+        self.memory = None
+        self.last_input = None
+    def press_equal(self):
+        if self.memory is not None: # 저장된값이 있으면 사칙연산 수행
+            self.current_number = operate(self.memory, self.current_number, self.current_operator)
+        self.last_input = None
