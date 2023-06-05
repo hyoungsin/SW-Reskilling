@@ -1,0 +1,49 @@
+'''
+
+[실습5 해설] Tuple vs List
+
+대결! Tuple vs List
+리스트와 튜플은 비슷한 점이 많습니다. 하지만 리스트는 내부 원소의 값을 수정, 삭제, 추가가 가능하고, 튜플은 이것이 불가능합니다.
+
+my_tuple = (1, 2, 3)
+my_list = [1, 2, 3]
+
+my_tuple.append(4) #Error!
+my_tuple.pop() #Error!
+my_tuple[0] = 4 #Error!
+
+my_list.append(4) #OK
+my_list.pop() #OK
+my_list[0] = 4 #OK
+Copy
+아래 실습을 따라해보면서 튜플의 원소의 값을 수정, 삭제, 추가하려고 시도해봅시다.
+
+
+이렇게 해봐요!
+5번째 줄에 my_tuple의 인덱스 2의 원소를 5로 바꿔치기 해봅시다.
+
+11번째 줄에 my_tuple에 숫자 6을 추가해봅시다. (.append() 이용)
+
+Tip!
+try-except는 예외 처리구문입니다. 우선 try문 안에 있는 내용을 실행하다가, 오류가 발생하면 except문 안에 있는 내용을 실행합니다.
+
+'''
+
+my_tuple = (1, 2, 3) #try: except:
+
+try:
+    #여기에 인덱싱을 이용해서 Tuple의 값을 변경해봅시다.
+    my_tuple[2] = 5 # 3을 5로 변경
+    
+    
+except TypeError:
+    print("Tuple은 값을 변경할 수 없습니다.")
+    
+try:
+    #여기에 .append()를 이용해서 Tuple의 값을 추가해봅시다.
+    my_tuple.append(5) # 맨마지막에 5를 추가
+    
+    
+except AttributeError:
+    print("Tuple은 값을 추가할 수 없습니다.")
+
