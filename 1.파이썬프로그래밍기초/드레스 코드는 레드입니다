@@ -1,0 +1,54 @@
+'''
+드레스 코드는 레드입니다
+엘리스 토끼는 크리스마스를 맞아 친구들과 함께 파티를 하기로 했습니다.드레스 코드는 레드로 정하였고 드디어 파티 당일이 되었습니다.
+
+그런데 몇몇 친구들이 드레스 코드와 맞지 않는 옷을 입고 왔어요.
+
+dress_code 리스트에는 친구들이 입고 온 옷의 색이 담겨 있습니다.
+red 옷을 입지 않은 친구들은 어떤 옷을 입었는지 확인해 봅시다.
+
+지시사항
+end가 입력될 때까지 입력을 받아 dress_code 리스트에 저장한 뒤 출력하세요.
+입력 예시
+
+red
+blue
+red
+white
+red
+red
+black
+red
+yellow
+red
+red
+red
+red
+brown
+end
+Copy
+출력 예시
+
+['red', 'blue', 'red', 'white', 'red', 'red', 'black', 'red', 'yellow', 'red', 'red', 'red', 'red', 'brown']
+Copy
+
+dress_code 리스트에서 red를 모두 제거하고 출력하세요.
+출력 예시
+['blue', 'white', 'black', 'yellow', 'brown']
+Copy
+
+'''
+
+a = []
+while True:
+    s = input()
+    if s == 'end':
+        break
+    a.append(s)
+
+print(a)
+
+while 'red' in a:
+    a.remove('red')
+
+print(a)
