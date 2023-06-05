@@ -1,0 +1,46 @@
+'''
+
+[실습1 해설] pop, count
+
+원소의 개수세기 / 꺼내기
+리스트에 원소의 개수를 세고, 인덱스로 원소를 꺼내는 방법은 다음과 같습니다.
+
+원소의 개수세기 : 시퀀스이름.count(자료)
+인덱스로 원소 꺼내기 : 리스트이름.pop(인덱스)
+단, 존재하지 않는 인덱스를 pop할 경우 Python은 오류를 발생시킵니다.
+
+my_list = [1, 2, 3, 3, 4, 5]
+print(my_list.count(3)) #2
+print(my_list.pop()) #5
+print(my_list.pop(5)) #Error!
+Copy
+아래 실습을 따라해보면서 원소의 개수를 세고 꺼내는 방법을 익혀봅시다.
+
+
+이렇게 해봐요!
+숫자 1, 2, 2, 3, 3, 3이 담긴 리스트 my_list를 하나 선언해봅시다.
+
+my_list 안의 숫자 3의 개수를 변수 var1에 넣어봅시다.
+
+일부 원소를 제거하여 my_list가 [1, 2, 3]이 되도록 해봅시다.
+
+Tip!
+my_list.pop(__)을 사용할 때, pop하는 순서가 매우 중요해요!
+리스트의 내용을 확인하려면 이를 출력해보면 되겠죠?
+'''
+
+my_list = [1, 2, 2, 3, 3, 3]
+var1 = my_list.count(3)
+# print(var1)
+
+# my_list1 = my_list[0:3]
+# print(my_list)
+
+my_list.pop() #맨 마지막 삭제
+# print(my_list)
+
+my_list.pop() #맨 마지막 삭제
+# print(my_list)
+
+my_list.pop(2) #2번째 index삭제
+print(my_list)
