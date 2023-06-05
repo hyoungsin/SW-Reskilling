@@ -1,0 +1,27 @@
+'''
+
+숫자 찾기
+리스트 안에 숫자가 있는지 찾아내는 findNumber 클래스가 있습니다.
+
+findNumber 클래스에는 find(num_list)라는 메서드가 있습니다. 이 메서드는 리스트를 매개변수로 받고 리스트 안에 필드 num이 있는지 없는지 확인해 줍니다.
+
+num의 초깃값은 0이지만 setNum() 메서드를 이용해 원하는 숫자로 변경할 수 있습니다.
+
+
+지시사항
+리스트를 매개변수로 받고 해당 리스트 안에 필드 num이 있으면 True 없으면 False를 반환하는 find() 메서드를 완성해 보세요.
+
+필드 num을 매개변수 n으로 설정하는 setNum() 메서드를 완성해 보세요.
+
+'''
+class findNumber():
+    num = 0
+    def find(self, num_list):
+        if self.num in num_list:
+            return True
+        else:
+            return False
+    
+    # 2번을 해보세요.
+    def setNum(self, n):
+        self.num = n 
