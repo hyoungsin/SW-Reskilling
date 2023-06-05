@@ -1,0 +1,65 @@
+'''
+
+[실습2 해설] 스마트 홈 테스트
+
+스마트 홈 테스트
+2주차 프로젝트로 작성했던 함수 중, control_heater()를 테스트하는 문제입니다.
+
+control_heater() 함수는, heater를 매개변수로 받아, heater.current_temperature(현재 온도)와 heater.preferred_temperature(설정 온도)를 비교한 후, 현재 온도가 더 낮으면 히터를 켜고 (heater.is_turned_on = True), 아니면 끄는 함수입니다.
+
+assert문을 활용하여, 함수가 설계대로 작동하는지 확인하는 테스트를 짜 보세요.
+
+
+시작하기 전에
+smart_home.py 파일을 열어 Heater 클래스가 어떻게 구성되어 있는지 확인해 보세요.
+'''
+
+from smart_home import Heater
+
+# 현재 온도가 설정 온도보다 낮을 때 히터가 자동으로 켜지는지 확인합니다.
+def test_control_heater_when_cold(control_heater):
+    heater = Heater() # Heater Class 호출
+    heater.current_temperature = -1
+    heater.preferred_temperature = 2
+    control_heater(heater)
+    assert(heater.is_turned_on == True)
+
+
+# 현재 온도가 설정 온도보다 높을 대 히터가 자동으로 꺼지는지 확인합니다.
+def test_control_heater_when_hot(control_heater):
+    heater = Heater()
+    heater.current_temperature = 5
+    heater.preferred_temperature = 1
+    control_heater(heater)
+    assert(heater.is_turned_on == False)
+
+
+# 현재 온도와 설정 온도가 같을 때 히터가 자동으로 꺼지는지 확인합니다.
+def test_control_heater_when_same(control_heater):
+    heater = Heater()
+    heater.current_temperature = 5
+    heater.preferred_temperature = 5
+    control_heater(heater)
+    assert(heater.is_turned_on == False)
+
+
+# from smart_home import Heater
+
+
+# # 현재 온도가 설정 온도보다 낮을 때 히터가 자동으로 켜지는지 확인합니다.
+# def test_control_heater_when_cold(control_heater):
+#     heater = Heater()
+#     pass
+#     assert(heater.is_turned_on == True)
+
+
+# # 현재 온도가 설정 온도보다 높을 대 히터가 자동으로 꺼지는지 확인합니다.
+# def test_control_heater_when_hot(control_heater):
+#     heater = Heater()
+#     pass
+
+
+# # 현재 온도와 설정 온도가 같을 때 히터가 자동으로 꺼지는지 확인합니다.
+# def test_control_heater_when_same(control_heater):
+#     heater = Heater()
+#     pass
