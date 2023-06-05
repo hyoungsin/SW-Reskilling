@@ -1,0 +1,37 @@
+'''
+
+[실습5 해설] 시퀀스의 인덱싱/슬라이싱
+
+시퀀스의 인덱싱과 슬라이싱
+인덱싱 : 시퀀스의 한 원소를 가져오는 것
+슬라이싱 : 시퀀스의 일부분을 가져오는 것
+my_list = [1, 2, 3, 4, 5]
+print(my_list[2]) #3
+print(my_list[1:4]) #[2, 3, 4]
+Copy
+아래 실습을 따라해보면서 시퀀스에서 인덱싱과 슬라이싱을 하는 방법을 익혀봅시다.
+
+
+이렇게 해봐요!
+문자열 “Impossible”이 담긴 변수 my_str을 만들어봅시다.
+
+리스트 ["Apple", "Banana", "Chamwae", "Durian"]이 차례대로 담긴 변수 my_list를 만들어봅시다.
+
+리스트 my_list에서 인덱싱을 이용해 변수 var1에 "Chamwae"를 넣어봅시다.
+
+문자열 my_str에서 슬라이싱을 이용해 변수 var2에 "possible"을 넣어봅시다.
+
+Tip!
+슬라이싱을 할 때 숫자를 적어주지 않을 수도 있어요! 다음 예제를 함께 살펴볼까요?
+my_list = [1, 2, 3, 4, 5, 6]
+print(my_list[3:]) # [4, 5, 6]
+print(my_list[:2]) # [1, 2]
+print(my_list[:]) # [1, 2, 3, 4, 5, 6]
+Copy
+첫번째 숫자를 생략하면 맨 앞에서, 두번째 숫자를 생략하면 맨 뒤까지 라는 의미를 가지고 있어요.
+'''
+
+my_str = 'impossible'
+my_list = ['Apple','Banana','Chamwae','Durian']
+var1 = my_list[2]
+var2 = my_str[2:]
