@@ -1,0 +1,41 @@
+'''
+
+분리수거
+recycle 모듈에 있는 Recycle 클래스는 다음과 같은 필드와 메서드로 이루어져 있습니다.
+
+필드
+
+trash : 쓰레기의 종류를 나타내는 문자열
+isRecycle : 분리수거가 가능한지 나타내는 논리형 변수
+메서드
+
+canRecycle() : 분리수거가 가능하도록 설정
+whatTrash(tr) : 쓰레기의 종류를 설정
+throwTrash() : 분리수거 한 것을 출력
+
+지시사항
+recycle 모듈을 불러오세요.
+
+Recycle 클래스의 객체로 coke_can 인스턴스를 만들고 다음 메서드를 호출해 보세요.
+
+canRecycle()
+whatTrash('can')
+throwTrash()
+Recycle 클래스의 객체로 clothes 인스턴스를 만들고 다음 메서드를 호출해 보세요.
+
+whatTrash('cloth')
+throwTrash()
+'''
+import recycle
+
+coke_can = recycle.Recycle()
+
+coke_can.canRecycle()
+coke_can.whatTrash('can')
+coke_can.throwTrash()
+
+clothes  = recycle.Recycle()
+
+clothes.whatTrash('cloth')
+clothes.throwTrash()
+
