@@ -1,0 +1,49 @@
+'''
+
+[실습1 해설] Palindrome 테스트
+
+Palindrome 테스트
+주어진 문자열이 회문(palindrome) 인지 확인하는 is_palindrome() 함수를 테스트해 보겠습니다.
+
+is_palindrome() 함수는 다음과 같은 조건을 만족해야 합니다.
+
+하나의 문자열을 매개변수로 받습니다.
+주어진 문자열이 앞으로 읽어도 뒤로 읽어도 같은 회문이라면, True를 리턴합니다. (예시: madam, level, 다시합창합시다)
+주어진 문자열에서 대소문자, 공백, 특수문자는 무시합니다. 즉, “다시 합창합시다!” 는 회문입니다.
+빈 문자열은 회문으로 취급합니다.
+여러분이 작성할 test_is_palindrome() 함수는 assert를 이용해 함수를 테스트합니다. 테스트할 함수 is_palindrome이 매개변수로 주어집니다. 실행했을 때 아무런 에러가 발생하지 않으면 테스트를 모두 통과한 것입니다.
+
+위의 조건을 잘 읽고, 테스트 함수를 완성해 보세요.
+'''
+from helper import is_palindrome
+
+# 다양한 예시에 대해 함수를 테스트합니다.
+def test_is_palindrome(is_palindrome):    
+    # 문자열 "madam"에 대해 테스트합니다. 리턴값은 True여야 합니다.
+    assert(is_palindrome("madam") == True)
+
+    # 아래 assert 안의 False들을 지우고 코드를 작성하면 됩니다.
+    # 올바른 리턴값은 문제 설명의 함수 설계를 보고 생각해 보세요.
+
+    # 문자열 "adam"에 대해 테스트합니다.
+    assert(is_palindrome("adam") == False)
+
+    # 빈 문자열에 대해 테스트합니다.
+    assert(is_palindrome("") == True)
+
+    # 문자열 "Step on no pets"에 대해 테스트합니다.
+    assert(is_palindrome("Step on no pets") == True)
+
+    # 문자열 "Madam, I'm Adam"에 대해 테스트합니다.
+    assert(is_palindrome("Madam, I'm Adam") == True)
+
+    # 문자열 "소주 만 병만 주소"에 대해 테스트합니다.
+    assert(is_palindrome("소주 만 병만 주소") == True)
+
+    # 문자열 "!소주 만 병만 주소?"에 대해 테스트합니다.
+    assert(is_palindrome("!소주 만 병만 주소?") == True)
+
+    # 문자열 "소주 만 병쯤만 주소"에 대해 테스트합니다.
+    assert(is_palindrome("소주 만 병쯤만 주소") == False)
+
+test_is_palindrome(is_palindrome)
