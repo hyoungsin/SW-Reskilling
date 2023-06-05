@@ -1,0 +1,26 @@
+'''
+
+[실습6 해설] 시퀀스의 길이/멤버 조사
+
+시퀀스의 길이와 멤버 조사하기
+길이 : len(시퀀스)
+멤버 조사 : 원소 in 시퀀스 (존재하면 True, 존재하지 않으면 False)
+my_str = "abc"
+print(len(my_str)) #3 - my_str의 길이
+print('d' in my_str) #False - 존재하지 않음
+Copy
+아래 실습을 따라해보면서 시퀀스의 길이와 멤버를 조사하는 방법을 익혀봅시다.
+
+
+이렇게 해봐요!
+문자열 "Impossible"이 담긴 변수 my_str을 만들어봅시다.
+
+리스트 ["Apple", "Banana", "Chamwae", "Durian"]이 담긴 변수 my_list를 만들어봅시다.
+
+len을 이용해서 변수 var1에 my_str의 길이를 넣어봅시다.
+
+in을 이용해서 "Egg"가 my_list에 들어있는지 확인하고, 이 결과(True or False)를 변수 var2에 넣어봅시다.
+
+
+
+'''
