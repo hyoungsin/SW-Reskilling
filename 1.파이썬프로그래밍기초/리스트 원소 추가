@@ -1,0 +1,38 @@
+'''
+
+[실습1 해설] 리스트 원소 추가
+
+리스트에 원소 추가하기
+리스트에 원소를 추가하는 방법은 다음과 같습니다.
+
+원소 추가 : 리스트이름.append(자료)
+단, 추가한 원소는 리스트의 마지막 원소 뒤에 추가됩니다. (빈 리스트라면 가장 처음위치)
+
+my_list = []
+my_list.append(1)
+my_list.append(2)
+my_list.append(3)
+
+print(my_list) #[1, 2, 3]
+Copy
+아래 실습을 따라해보면서 리스트에 원소를 추가하는 방법을 익혀봅시다.
+
+
+이렇게 해봐요!
+빈 리스트 my_list를 하나 선언해봅시다.
+
+my_list에 숫자 5, 4, 2, 1을 차례대로 넣어봅시다.
+
+Tip!
+리스트 이름이 my_list이니 다음과 같이 작성해야겠죠? : my_list.append(__)
+리스트의 내용을 확인하려면 이를 출력해보면 되겠죠?
+
+'''
+
+my_list = []
+my_list.append(5) #1개만추가할수 있음 여러개 추가시 반복문 사용해야 함 
+my_list.append(4)
+my_list.append(2)
+my_list.append(1)
+
+print(my_list) #[1, 2, 3]
