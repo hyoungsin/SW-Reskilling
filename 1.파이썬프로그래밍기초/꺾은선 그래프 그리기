@@ -1,0 +1,41 @@
+'''
+
+[실습3 해설] 꺾은선 그래프 그리기
+
+꺾은선 그래프 그리기
+기온의 변화를 쉽게 관찰하기에는, 막대 그래프보다 꺾은선 그래프가 더 적절하겠죠? matplotlib은 막대 그래프 외에도 scatter plot, 꺾은선 그래프 등의 다양한 차트 형식을 제공하고 있습니다.
+
+plt.bar() 함수 대신, plt.plot() 함수를 사용하면 꺾은선 그래프를 그릴 수 있습니다.
+
+영상의 설명을 따라, 2018년 7월의 서울 일자별 최고 기온을 나타내는 꺾은선 그래프를 그려 보세요.
+'''
+
+
+from elice_utils import EliceUtils # 그래프 전달 도구 엘리스 자체 library
+elice_utils = EliceUtils() # 객체화
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+font = fm.FontProperties(fname='./NanumBarunGothic.ttf')
+
+x = range(31) 
+temperatures = [
+    22.8, 25.3, 32.6, 31.8, 29.0, 27.1, 29.2,
+    28.1, 24.2, 26.5, 29.5, 28.2, 30.9, 31.9,
+    33.2, 34.0, 32.1, 33.2, 34.1, 34.7, 36.9,
+    38.0, 35.7, 36.8, 34.1, 33.7, 35.4, 35.2,
+    36.7, 36.9, 38.3
+]
+
+ticks = []
+for i in x:
+    ticks.append('7월 {}일'.format(i+1)) # 날짜 반복문 생성
+plt.plot(x, temperatures)
+plt.title('7월날씨', fontproperties=font)
+plt.xticks(x, ticks, fontproperties=font,rotation = 'vertical')
+plt.savefig('graph.png')
+elice_utils.send_image('graph.png')
+
+from elice_utils import EliceUtils # 그래프 전달 도구 엘리스 자체 library
+elice_utils = EliceUtils() # 객체화
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
