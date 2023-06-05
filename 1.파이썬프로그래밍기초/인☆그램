@@ -1,0 +1,51 @@
+'''
+
+인☆그램
+SNS를 즐겨 하는 엘리스를 위해 글을 저장하는 클래스를 만들어주려고 합니다.
+
+Article 클래스는 다음과 같은 필드와 메서드로 이루어져 있습니다.
+
+필드
+
+likes: “좋아요 수”를 나타내는 int 변수, 초깃값은 0
+content : “내용”을 나타내는 String 변수, 초깃값은 “”
+hashtag : “해시태그”를 나타내는 list 변수, 초깃값은 []
+**메서드**
+remove() : 모든 필드의 값을 초깃값으로 초기화
+like_article() : 좋아요 수를 1 증가
+
+지시사항
+Article 클래스의 필드 좋아요 수, 내용, 해시태그를 추가해 보세요.
+
+Article 클래스에서 값을 초기화하는 메서드와 좋아요 수를 증가시키는 메서드를 추가해 보세요.
+
+
+'''
+
+class Article:
+    likes = 0 
+    content = ''
+    hashtag = [] 
+    def remove(self): # 초기값 세팅
+        self.likes = 0 
+        self.content = ''
+        self.hashtag = []        
+    def like_article(self): #좋아요 개수 추가
+        self.likes += 1  
+
+insta = Article()
+insta.content = "열심히 코딩 공부 하는 중"
+insta.hashtag = ['엘리스', '체셔']
+insta.like_article()
+insta.like_article()
+insta.like_article()
+
+print(insta.content)
+print(insta.hashtag)
+print(insta.likes)
+
+insta.remove()
+
+print(insta.content)
+print(insta.hashtag)
+print(insta.likes)
