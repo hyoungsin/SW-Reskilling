@@ -1,0 +1,31 @@
+'''
+
+[실습2 해설] 좋아요 누르기
+
+좋아요 누르기
+실습 2번에서는 1번에서 만든 Post 클래스에 페이스북에서 가장 중요한 기능인 좋아요를 추가해 보겠습니다. 실습 2번의 Post에서 달라지는 점은 다음과 같습니다.
+
+likes 속성이 좋아요의 개수가 아닌 좋아요를 누른 사람들의 리스트를 의미합니다. 이 리스트의 사용자들은 좋아요를 누른 순서대로 정렬되어야 합니다.
+대신 좋아요의 개수를 얻을 수 있는 num_likes() 메소드를 추가합니다.
+좋아요 누르는 액션을 의미하는 like() 메소드를 추가합니다. 이 메소드는 User 클래스의 인스턴스를 매개변수로 받습니다. 만약 이미 사용자가 이 게시물에 좋아요를 눌렀다면 새로운 좋아요를 무시합니다.
+조건에 맞게 Post 클래스를 완성했다면, 직접 인스턴스를 만들어 여러분의 코드를 테스트해 보세요. 잘 작동한다면 제출 버튼을 눌러 채점해 봅시다.
+
+'''
+
+
+from user import User
+class Post:
+    def __init__(self, author, content):
+        self.author = author
+        self.content = content
+        self.likes = [] 
+
+    def like(self,user): # like를 눌렀을때 동작하는 method 
+        if user not in self.likes:
+            return self.likes.append(user)
+    def num_likes(self):
+        return len(self.likes) 
+me = User("Elice")
+my_post = Post(me, 'Python')
+
+print(my_post.content)
