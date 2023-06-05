@@ -1,0 +1,41 @@
+'''
+
+상속하기
+객체지향 프로그래밍에는 여러 특징이 존재하는데, 이번 Vol.2에서는 2가지를 먼저 다루어보고자 합니다.
+
+상속 : 한 클래스의 내용을 다른 클래스가 이어받는 것
+class Car:
+    type = "자동차"
+        
+class Hyundai(Car):
+    pass
+        
+sonata = Hyundai()
+print(sonata.type) #자동차
+Copy
+상속을 통해 한 클래스에서 다른 클래스로 핵심 정보를 전달해줄 수 있습니다.
+
+
+지시사항
+Pet 클래스를 만들어보고, 다음 필드와 메서드를 추가해봅시다.
+필드 attr = “cute”
+메서드 cry = “멍멍!”을 반환
+Dog 클래스를 만들어보고, Pet을 상속받아봅시다.
+Dog 클래스로 인스턴스 maltese를 만들어봅시다.
+Tip!
+pass는 아무런 동작도 하지 않는 코드입니다.
+
+함수를 만들고 아무런 코드도 없다면 오류를 일으키기 때문에 무의미한 pass를 넣습니다.
+
+'''
+class Pet:
+    attr = 'cute'
+    def cry(self):
+        return '멍멍!'
+
+class Dog(Pet):
+    pass
+
+maltese = Dog()
+print(maltese.attr)
+print(maltese.cry())
