@@ -1,0 +1,24 @@
+'''
+
+동물농장
+동물과 동물의 울음소리를 필드로 가지는 클래스 Animal이 있습니다.
+
+인스턴스를 만들어서 클래스를 활용해 봅시다.
+
+
+지시사항
+Animal 클래스의 인스턴스 dog를 만들고 name에는 “강아지”, say에는 “멍멍!” 을 저장하세요.
+
+saying() 메서드를 이용해서 dog의 울음소리를 출력하세요.
+'''
+class Animal:
+    name = ''
+    say = ''
+    def saying(self):
+        print(self.say)
+
+dog = Animal() # instance 객체화
+dog.name = '강아지'
+dog.say = '멍멍!'
+
+dog.saying()
