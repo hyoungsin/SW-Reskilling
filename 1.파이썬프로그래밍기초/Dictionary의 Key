@@ -1,0 +1,40 @@
+'''
+
+[실습7 해설] Dictionary의 Key
+
+열쇠가 고장나면 자물쇠를 열 수 없죠! 그렇다면 Dictionary도?!
+Dictionary에서 Key는 Value를 가져오기 위한 중요한 요소입니다. 그렇기 때문에 Key는 변할 수 없는 자료형이여야 합니다. 또한, 2개 이상의 동일한 Key가 있어선 안 됩니다.
+
+my_dict = {1:"One", 1:"Yi"} #Bad
+my_dict = {[1, 2, 3]:"Numbers"} #Error...
+my_dict = {(1, 2, 3):"Numbers"} #OK!
+Copy
+따라서 여러 자료의 묶음을 Key로 설정하고 싶다면, List가 아닌 Tuple을 사용하세요!
+
+아래 실습을 따라해보면서 Key로 설정할 수 있는 자료가 무엇인지 익혀봅시다.
+
+
+이렇게 해봐요!
+빈 Dictionary를 만들고, 이를 변수 my_dict에 넣어봅시다.
+
+my_dict에 다음 대응관계를 넣어봅시다.
+
+1 → “Integer”
+‘a’ → “String”
+(1, 2, 3) → “Tuple”
+my_dict에 다음 대응관계를 추가하는 코드를 10번째 줄에 작성해봅시다.
+[1, 2, 3] → “List”
+Tip!
+try-except는 예외 처리구문입니다. 이는 추후 강좌에서 다룰 내용이에요! 조금만 기다려 주세요 :)
+Key와 Value의 문자열의 철자와 대소문자에 주의하세요!
+'''
+
+my_dict = {1:'Integer', 'a': 'String', (1,2,3) : 'Tuple'} #더블클릭하면 copy됨 (범위지정 불필요)
+
+
+try:
+    #여기에 [1, 2, 3] → "List"의 대응관계를 만들어봅시다.
+    my_dict[[1,2,3]] = 'List' #List는 dict로 추가할수 없음
+    
+except TypeError:
+    print("List는 Dictionary의 Key가 될 수 없습니다.")
