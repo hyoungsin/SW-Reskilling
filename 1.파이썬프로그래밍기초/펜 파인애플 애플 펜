@@ -1,0 +1,43 @@
+'''
+
+펜 파인애플 애플 펜
+words 리스트에 영어 단어들이 들어있습니다.
+
+문자열, 리스트 함수를 이용해 문장을 만들어볼까요?
+
+
+지시사항
+words 리스트에서 pop을 이용해 인덱스 4, 4, 5, 5, 5 순서로 원소를 제거하세요.
+
+join 함수를 이용해서 공백을 기준으로 리스트를 연결하여 lyrics 변수에 저장하세요.
+
+lyrics를 출력하세요.
+
+문자 ‘p’의 개수를 count 함수를 이용해서 출력하세요.
+
+'''
+# 영어 단어가 들어있는 리스트입니다.
+words = ['i', 'have', 'a', 'pen', 'i', 'have', 'pineapple', 'i', 'have', 'an', 'apple', 'pen']
+
+# 1번을 해보세요.
+
+words.pop(4)
+words.pop(4)
+words.pop(5)
+words.pop(5)
+words.pop(5)
+# print(words)
+
+# 2번을 해보세요.
+lyrics = " ".join(words) #string과 반대
+
+
+# 3번을 해보세요.
+print(lyrics)
+
+
+# 4번을 해보세요.
+print(lyrics.count('p'))
+
+# str1 = input() #오형신&바보
+# print(str1.split('&')) #['오형신', '바보']
