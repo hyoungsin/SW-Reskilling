@@ -1,0 +1,20 @@
+'''
+청개구리
+AND, OR, NOT 같은 논리연산의 경우 좌항과 우항의 값을 비교하여 True 혹은 False로 결과를 반환합니다.
+
+함수 tree_frog는 True 혹은 False만을 입력받으며,
+
+True가 입력됐다면 False를 반환,
+
+Flase가 입력됐다면 True를 반환합니다.
+
+
+지시사항
+True가 주어지면 False를, False가 주어지면 True를 반환하는 함수 tree_frog를 완성하세요.
+
+'''
+
+def tree_frog(b):
+    return not b
+
+print(tree_frog(1==1))
